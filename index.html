@@ -13,7 +13,6 @@
     font-size: 100%;
     font-weight: inherit;
   }
-
   body {
     background: #bababf;
     color: #f7f7f7;
@@ -21,13 +20,11 @@
     height: 100vh;
     position: relative; /* Ensure body is the positioning context */
   }
-
   .ghostie {
     position: absolute;
     right: 10px;
     bottom: 10px;
   }
-
   .text {
     font-family: "Work Sans", sans-serif;
     display: none;
@@ -38,13 +35,11 @@
     font-variant-ligatures: normal;
     visibility: hidden;
   }
-
   h1 {
     font: inherit;
     line-height: inherit;
     letter-spacing: inherit;
   }
-
   .text p, h1 {
     opacity: 0;
     display: none;
@@ -52,7 +47,6 @@
     animation: fadein .2s forwards ease-out;
     padding: 2.16vw 10vw 3.24vw 3vw;
   }
-
   .text a {
     text-decoration: underline;
     text-decoration-skip: ink;
@@ -63,22 +57,18 @@
     margin-right: -.5vw;
     cursor: pointer;
   }
-
   .text a:hover {
     text-decoration: none;
   }
-
   .text a:focus {
     text-decoration: none;
     outline: solid 4px rgba(0,0,0,.4);
   }
-
   ::selection {
     background: #000;
     background: rgba(0,0,0,.99);
     color: #fff;
   }
-
   @keyframes fadein {
     0% {
       opacity: 0;
@@ -89,6 +79,60 @@
       margin-top: 0;
     }
   }
+  
+  /* Client logos section */
+  .client-section {
+    opacity: 0;
+    display: none;
+    visibility: hidden;
+    animation: fadein .2s forwards ease-out;
+    animation-delay: 0.4s;
+    padding: 4vw 3vw 2vw;
+  }
+  
+  .client-title {
+    font-family: "Work Sans", sans-serif;
+    font-size: 2.5vw;
+    font-weight: 500;
+    margin-bottom: 2vw;
+    color: #f7f7f7;
+  }
+  
+  .client-logos {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 4vw;
+    flex-wrap: wrap;
+  }
+  
+  .logo-container {
+    width: 10vw;
+    min-width: 120px;
+    height: 4vw;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .logo-container svg {
+    max-width: 100%;
+    max-height: 100%;
+    fill: #f7f7f7;
+  }
+  
+  @media (max-width: 768px) {
+    .client-title {
+      font-size: 4vw;
+    }
+    .logo-container {
+      width: 25vw;
+      min-width: 100px;
+      height: 10vw;
+      min-height: 40px;
+    }
+  }
   </style>
 </head>
 <body style="display:none;">
@@ -97,9 +141,39 @@
     <p style="animation-delay: 0.2s;">Sheet Ghost provides concierge ghostwriting services for executives at growth-stage technology companies.</p>
     <p style="animation-delay: 0.3s;">Contact us: kristen@sheetghost.com</p>
   </div>
+  
+  <div class="client-section">
+    <div class="client-title">Our clients have been featured in:</div>
+    <div class="client-logos">
+      <!-- WIRED Logo -->
+      <div class="logo-container">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50" width="200" height="50">
+          <text x="0" y="35" font-family="Arial, sans-serif" font-size="40" font-weight="900" fill="#f7f7f7">WIRED</text>
+        </svg>
+      </div>
+      
+      <!-- Forbes Logo -->
+      <div class="logo-container">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50" width="200" height="50">
+          <text x="0" y="35" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#f7f7f7">Forbes</text>
+        </svg>
+      </div>
+      
+      <!-- Hacker News Logo -->
+      <div class="logo-container">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50" width="200" height="50">
+          <rect x="0" y="0" width="50" height="50" fill="#f7f7f7"/>
+          <rect x="5" y="5" width="40" height="40" fill="#bababf"/>
+          <text x="10" y="35" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#f7f7f7">HN</text>
+          <text x="60" y="25" font-family="Arial, sans-serif" font-size="16" font-weight="400" fill="#f7f7f7">Hacker News</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+  
   <div class="ghostie"><img src="loneghost.png" width="10%" height="10%"></div>
   
-  <!-- DON’T REMOVE THE FOLLOWING TWO LINES! -->
+  <!-- DON'T REMOVE THE FOLLOWING TWO LINES! -->
   <script type="text/javascript">const fs = 5.4;</script>
   <script type="text/javascript" src="https://temper.one/temper.js"></script>
 </body>
